@@ -32,7 +32,27 @@ Tugas Web dibaut oleh :
 ```bash
 git clone https://github.com/Firyal224/Tugasweb.git
 ```
+## Edit View
 
+**Base Layout Dashboard Edit**
+- Masuk ke Resources\Views\layoutsDashboard\ edit footer untuk semua page (sudah login atau belum)
+- Edit navbar di path yang sama untuk tampilan dashboard (sesudah login -> admin / pegawai)
+- Edit sidebar di path file yang sama
+- cssnya ada di file head.blade.php
+
+**Base Datatable Edit View**
+- Untuk admin masuk ke Resources\views\admin\dashboard.blade.php
+- Untuk pegawai masuk ke ......\pegawai\dashboardPegawai.blade.php
+- note * Kalau rubah Htmlnya perhatiin id -> name -> for -> value
+- Ada bug tampilan waktu validasi mandatory field -> di modal simpan di file yang sama -> tulisan Requiered jadi besar harusnya enggak
+![image](https://user-images.githubusercontent.com/71587225/163460744-1973d8cf-7de2-43c1-9095-e1ef7b767a82.png)
+( Ini aing juga gtw kenapa :") mengsedih )
+
+- button show belum bisa 
+
+**Base Landing page Edit**
+- Resources\views\home
+- 
 **Download zip**
 
 ```bash
