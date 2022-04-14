@@ -1,49 +1,36 @@
-<h1 align="center">Laravel 8 Blog</h1>
+<h1 align="center">Tugas Web</h1>
 
 ## Author
 
-Laravel 8 blog dibaut oleh :
+Tugas Web dibaut oleh :
 
-- Github : <a href="https://github.com/musyahya/laravel_8_blog"> Musyahya </a>
-- Youtube : <a href="https://www.youtube.com/channel/UC1iCvpMssrHnUsWKEe2cOag"> Musyahya </a>
+- Github : <a href="https://github.com/Firyal224/Tugasweb.git
+">  </a>
+
 
 ## Fitur 
 
-- Autentikasi Admin, Penulis dan Pembaca
-- CRUD Kategori
-- CRUD Tag
-- CRUD Post
-- CRUD Banner
-- CRUD Logo
-- CRUD Footer
-- CRUD Tentang/About
-- Rekomendasi post
-- Like post
-- Dan lain-lain
+- Autentikasi Admin, Pegawai
 
 ## User
 
 **Admin**
 
 - email: admin@gmail.com
-- Password: 123123123
+- Password: admin123
 
-**Penulis**
+**Pegawai**
 
-- email: penulis@gmail.com
-- Password: 123123123
+- email: pegawai@gmail.com
+- Password: pegawai123
 
-**Pembaca**
-
-- email: pembaca@gmail.com
-- Password: 123123123
 
 ## Install
 
 **Clone Repository**
 
 ```bash
-git clone https://github.com/musyahya/laravel_8_blog.git
+git clone https://github.com/Firyal224/Tugasweb.git
 ```
 
 **Download zip**
@@ -113,4 +100,4 @@ Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Ber
 
 ## License
 
-- Copyright © 2021 Musyahya.
+- Copyright © 2022 Firyal
