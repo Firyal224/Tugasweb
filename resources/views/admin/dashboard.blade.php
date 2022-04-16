@@ -10,7 +10,6 @@
 				<div class="x_panel">
 					<div class="x_title">
 						<h2><small>User Data</small></h2>
-						<div class="clearfix"></div>
 					</div>
 
 					<div class="x_content">
@@ -50,7 +49,7 @@
                      <div class="col-lg-12 col-sm-12 hero-feature" >
                         <div class="table-responsive">
 
-                             <table class="table table-striped table-bordered table-sm" id="table_pegawai" >
+                        <table class="table table-striped table-bordered table-sm" id="table_pegawai" >
                         <thead style=" background-image: linear-gradient(to bottom right, ##B0C4DE, #f7f7f7);" >
                             <tr>
                                 <th >Divisi</th>

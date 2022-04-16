@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Footer;
 use App\Models\Pegawai;
-use DataTables;
+use DataTables ;
 class PegawaiController extends Controller
 {
     /**

@@ -2,14 +2,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{{-- head --}}
-@include('layoutsDashboard/head')
+{{-- head (1)--}} 
+@include('layoutsDashboard/head') 
 
 <body id="page-top">
 
+  {{--  3  --}}
   <!-- Page Wrapper -->
   <div id="wrapper">
-
+    {{--  4.0  --}}
     <!-- Sidebar -->
     @include('layoutsDashboard/sidebar')
 
@@ -25,6 +26,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
+        {{--  note: taruh konten  --}}
          @yield('content')
 
         </div>

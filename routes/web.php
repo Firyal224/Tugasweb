@@ -1,18 +1,8 @@
 <?php
 
 use App\Http\Controllers\ArtikelController;
-use App\Http\Controllers\BannerControler;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\SuratController;
-use App\Http\Controllers\FooterController;
-use App\Http\Controllers\KategoriController;
-use App\Http\Controllers\LikeController;
-use App\Http\Controllers\LogoController;
-use App\Http\Controllers\PembacaController;
-use App\Http\Controllers\PenulisController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\TagController;
-use App\Http\Controllers\TentangController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 

@@ -39,7 +39,7 @@
                     </li>
                 @else
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#logoutModal" href="#">Logout</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#logoutModal" href="">Logout</a>
                     </li>
                 @endrole
                    
@@ -48,9 +48,7 @@
                         <a class="nav-link" href="/login">Login</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="/register">Register</a>
-                    </li>
+
                 @endauth
             </ul>
         </div>
