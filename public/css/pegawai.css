@@ -1,12 +1,6 @@
-
-
-
-
-
-
-.button{
-    background-color: #fa6969;
-    box-shadow:-2px 2px 2px #ccc;
+.button {
+    background-color: #b0c4de;
+    box-shadow: -2px 2px 2px #ccc;
     color: #000000;
     font-weight: 400;
     font-size: 20px;
@@ -15,60 +9,60 @@
     height: 40px;
 }
 
-  
 .button:hover {
     animation-name: shine;
     animation-duration: 260ms;
-  }
-  
-  @keyframes shine {
+}
+
+@keyframes shine {
     0% {
-      background: linear-gradient(
-        30deg, 
-        hsl(260, 85%, 95%) 0%, 
-        hsl(0, 94%, 70%) 25%
-      );
+        background: linear-gradient(
+            30deg,
+            hsl(260, 85%, 95%) 0%,
+            hsl(214, 41%, 78%) 25%
+        );
     }
-  
+
     25% {
-      background: linear-gradient(
-        30deg, 
-        hsl(0, 94%, 70%) 0%, 
-        hsl(260, 85%, 95%) 25%, 
-        hsl(0, 94%, 70%) 50%);
+        background: linear-gradient(
+            30deg,
+            hsl(214, 41%, 78%) 0%,
+            hsl(260, 85%, 95%) 25%,
+            hsl(214, 41%, 78%) 50%
+        );
     }
-  
+
     50% {
-      background: linear-gradient(
-        30deg,
-        hsl(0, 94%, 70%) 0%, 
-        hsl(260, 85%, 95%) 50%, 
-        hsl(0, 94%, 70%) 75%); 
+        background: linear-gradient(
+            30deg,
+            hsl(214, 41%, 78%) 0%,
+            hsl(260, 85%, 95%) 50%,
+            hsl(214, 41%, 78%) 75%
+        );
     }
-  
+
     75% {
-      background: linear-gradient(
-        30deg, 
-        hsl(0, 94%, 70%) 0%, 
-        hsl(260, 85%, 95%) 75%, 
-        hsl(0, 94%, 70%) 100%); 
+        background: linear-gradient(
+            30deg,
+            hsl(214, 41%, 78%) 0%,
+            hsl(260, 85%, 95%) 75%,
+            hsl(214, 41%, 78%) 100%
+        );
     }
-  
+
     100% {
-      background: linear-gradient(
-        30deg, 
-        hsl(0, 94%, 70%) 0%, 
-        hsl(260, 85%, 95%) 100%); 
+        background: linear-gradient(
+            30deg,
+            hsl(214, 41%, 78%) 0%,
+            hsl(260, 85%, 95%) 100%
+        );
     }
-  }
+}
 
-
-
-  
-.tambah{
-    background-color: #fa6969;
-    box-shadow:-2px 2px 2px #ccc;
-    color: #000000;
+.tambah {
+    background-color: #b0c4de;
+    box-shadow: -2px 2px 2px #ccc;
+    color: #f7f7f7;
     font-weight: 400;
     font-size: 16px;
     text-align: center;
@@ -76,69 +70,59 @@
     height: 40px;
 }
 
-.icons-list{
-  list-style-type: none;    
+.icons-list {
+    list-style-type: none;
+}
 
-} 
-
-.list-group a{
-  background-image: linear-gradient(to bottom right, #fa6969, #f7f7f7);
+.list-group a {
+    background-image: linear-gradient(to bottom right, #000000, #f7f7f7);
 }
 .tambah:hover {
     animation-name: shine;
     animation-duration: 260ms;
-  }
-  
-  @keyframes shine {
+}
+
+@keyframes shine {
     0% {
-      background: linear-gradient(
-        30deg, 
-        hsl(260, 85%, 95%) 0%, 
-        hsl(0, 94%, 70%) 25%
-      );
+        background: linear-gradient(
+            30deg,
+            hsl(260, 85%, 95%) 0%,
+            hsl(214, 41%, 78%) 25%
+        );
     }
-  
+
     25% {
-      background: linear-gradient(
-        30deg, 
-        hsl(0, 94%, 70%) 0%, 
-        hsl(260, 85%, 95%) 25%, 
-        hsl(0, 94%, 70%) 50%);
+        background: linear-gradient(
+            30deg,
+            hsl(214, 41%, 78%) 0%,
+            hsl(260, 85%, 95%) 25%,
+            hsl(214, 41%, 78%) 50%
+        );
     }
-  
+
     50% {
-      background: linear-gradient(
-        30deg,
-        hsl(0, 94%, 70%) 0%, 
-        hsl(260, 85%, 95%) 50%, 
-        hsl(0, 94%, 70%) 75%); 
+        background: linear-gradient(
+            30deg,
+            hsl(214, 41%, 78%) 0%,
+            hsl(260, 85%, 95%) 50%,
+            hsl(214, 41%, 78%) 75%
+        );
     }
-  
+
     75% {
-      background: linear-gradient(
-        30deg, 
-        hsl(0, 94%, 70%) 0%, 
-        hsl(260, 85%, 95%) 75%, 
-        hsl(0, 94%, 70%) 100%); 
+        background: linear-gradient(
+            30deg,
+            hsl(214, 41%, 78%) 0%,
+            hsl(260, 85%, 95%) 75%,
+            hsl(214, 41%, 78%) 100%
+        );
     }
-  
+
     100% {
-      background: linear-gradient(
-        30deg, 
-        hsl(0, 94%, 70%) 0%, 
-        hsl(260, 85%, 95%) 100%); 
+        background: linear-gradient(
+            30deg,
+            hsl(214, 41%, 78%) 0%,
+            hsl(260, 85%, 95%) 100%
+        );
     }
-  }
-
-
- 
-
-  
-
-  
-
-
-
-
-
-
+}

@@ -1,11 +1,11 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="transform: translateY(-20px)">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          <i class="fa fa-address-card user-profile-icon"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Blog</div>
+        <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
       </a>
 
       <!-- Divider -->
