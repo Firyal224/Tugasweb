@@ -4,9 +4,37 @@
 
 @section('content')
     <link href="{{ asset('css/pegawai.css') }}" rel="stylesheet">
-      <!-- MULAI CONTAINER -->
-    <div class="container" style="margin-top:50px">
 
+    <div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="x_panel">
+					<div class="x_title">
+						<h2><small>User Data</small></h2>
+						<div class="clearfix"></div>
+					</div>
+
+					<div class="x_content">
+						<div class="col-md-4 col-sm-4 col-xs-12 profile_left">
+							<img class="rounded-circle justify-content-center" src="https://images.unsplash.com/source-404?fit=crop&fm=jpg&h=800&q=60&w=1200" style="width:100px;height:100px;">
+							<h3>Adminnyaaa</h3>
+							<ul >
+								<li><i class="fa fa-map-marker user-profile-icon"></i> Indonesia</li>
+								<li><i class="fa fa-building user-profile-icon"></i> Administrator</li>
+								<li><i class="fa fa-phone user-profile-icon"></i> 081234567890</li>
+								<li><i class="fa fa-envelope user-profile-icon"></i> <a href="https://webmail.umm.ac.id" target="_blank">admin@webmail.umm.ac.id</a></li>
+							</ul>
+							<a href="#" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+							<a href="https://infokhs.umm.ac.id/download/ktm/1" class="btn btn-info"><i class="fa fa-id-card-o m-right-xs"></i> Menu 2</a>
+							<a href="https://infokhs.umm.ac.id/download/ktm/1" class="btn btn-info"><i class="fa fa-id-card-o m-right-xs"></i> Menu 3</a>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    <!-- MULAI CONTAINER -->
+    <div class="container" style="margin-top:50px">
            <div class="col-lg-9 col-md-9 col-sm-2" >
                 <div class="card"  id="#card" style="padding:10px;">
                  
@@ -17,15 +45,13 @@
                     <!-- AKHIR TOMBOL -->
                  </div>
                
-                    
-                   
                     <!-- MULAI TABLE -->
                 
                      <div class="col-lg-12 col-sm-12 hero-feature" >
                         <div class="table-responsive">
 
                              <table class="table table-striped table-bordered table-sm" id="table_pegawai" >
-                        <thead style=" background-image: linear-gradient(to bottom right, #fa6969, #f7f7f7);" >
+                        <thead style=" background-image: linear-gradient(to bottom right, ##B0C4DE, #f7f7f7);" >
                             <tr>
                                 <th >Divisi</th>
                                 <th>Nama</th>
@@ -88,8 +114,7 @@
                                 <div class="form-group">
                                     <label for="name" class="col-sm-12 control-label">E-mail</label>
                                     <div class="col-sm-12">
-                                        <input type="email" class="form-control" id="email" name="email" value=""
-                                            required>
+                                        <input type="email" class="form-control" id="email" name="email" value="">
                                     </div>
                                 </div>
  

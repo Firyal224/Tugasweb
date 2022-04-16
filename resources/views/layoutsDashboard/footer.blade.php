@@ -1,7 +1,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <link rel="stylesheet" href="{{ asset ('css/footer.css') }}">
-<footer class="footer_area section_padding_130_0">
-      <div class="container" style="margin-top:50px">
+<footer class="footer_area section_padding_130_0" style="margin-top:50px">
+      <div class="container">
         <div class="row">
           <!-- Single Widget-->
           <div class="col-12 col-sm-6 col-lg-4">
