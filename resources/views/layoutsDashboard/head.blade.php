@@ -16,4 +16,11 @@
   <!-- Custom styles for this template-->
   <link href="/vendor/sb-admin/css/sb-admin-2.min.css" rel="stylesheet">
 
+  <!------ICONSCOUT CDN-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+
+<link rel="stylesheet" href="{{asset('css/landingpage.css')}}">
+
+
 </head>
