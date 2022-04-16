@@ -1,122 +1,84 @@
-<h1 align="center">Tugas Web</h1>
 
-## Author
+<h1 align="center">Tugasweb</h1>
 
-Tugas Web dibaut oleh :
+We'd like to apologize in advance that this was just a little project that was issued by our lecturer as an assignment on our 4th semester, as You'd expect the code would be so badly arranged, as we at the time have little to no knowledge about the subject itself.
 
-- Github : <a href="https://github.com/Firyal224/Tugasweb.git
-">  </a>
+### Original Author: Firyal224
+
+#### Contributors
+<a href="https://github.com/Firyal224/Tugasweb/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Firyal224/Tugasweb" width=100px> 
+</a>
+
+## Features
+- Landing Page
+- Login Form
+- Admin, Employee, and Reader Authentication
+- Database
+
+## Users
+
+||Admin|Employee (Pegawai)|
+|--|--|--|
+|e-mail|admin@gmail.com|admin123|
+|passwd|pegawai@gmail.com|pegawai123|
+
+## To-Do
+- [ ] Visual Font Bug on Field Check ---> [This](https://user-images.githubusercontent.com/71587225/163460744-1973d8cf-7de2-43c1-9095-e1ef7b767a82.png)
+- [ ] button show
+- [X] Footer Top Margin Error
+- [X] Bad Color Scheme
 
 
-## Fitur 
+## Deploy
 
-- Autentikasi Admin, Pegawai
-
-## User
-
-**Admin**
-
-- email: admin@gmail.com
-- Password: admin123
-
-**Pegawai**
-
-- email: pegawai@gmail.com
-- Password: pegawai123
-
-
-## Install
-
-**Clone Repository**
-
-```bash
-git clone https://github.com/Firyal224/Tugasweb.git
+#### Clone the Repo
 ```
-## Edit View
-
-**Base Layout Dashboard Edit**
-- Masuk ke Resources\Views\layoutsDashboard\ edit footer untuk semua page (sudah login atau belum)
-- Edit navbar di path yang sama untuk tampilan dashboard (sesudah login -> admin / pegawai)
-- Edit sidebar di path file yang sama
-- cssnya ada di file head.blade.php
-
-**Base Datatable Edit View**
-- Untuk admin masuk ke Resources\views\admin\dashboard.blade.php
-- Untuk pegawai masuk ke ......\pegawai\dashboardPegawai.blade.php
-- note * Kalau rubah Htmlnya perhatiin id -> name -> for -> value
-- Ada bug tampilan waktu validasi mandatory field -> di modal simpan di file yang sama -> tulisan Requiered jadi besar harusnya enggak
-![image](https://user-images.githubusercontent.com/71587225/163460744-1973d8cf-7de2-43c1-9095-e1ef7b767a82.png)
-( Ini aing juga gtw kenapa :") mengsedih )
-
-- button show belum bisa 
-
-**Base Landing page Edit**
-- Resources\views\home
-- 
-**Download zip**
-
-```bash
-extract file zip
+$ git clone https://github.com/Firyal224/Tugasweb.git
 ```
 
-## Buka di kode editor
-
-
-## Install composer
-
-```bash
-composer install
+#### Install composer
+```
+$ composer install
 ```
 
-## Copy .Env
-
-```bash
-copy .env.example menjadi .env
+#### Copy .Env
+```
+$ cp .env.example .env
 ```
 
-## Buat database di localhost 
-
-```bash
-nama database : laravel_8_blog
+#### Create Database 
+```
+Database Name : tugasweb
 ```
 
-## Setting database di .env
-
+#### .env Settings
 ```bash
 DB_PORT=3306
-DB_DATABASE=laravel_8_blog
+DB_DATABASE=tugasweb
 DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-## Generate key
-
-```bash
+#### Generate key
+```
 php artisan key:generate
 ```
 
-## Jalankan migrate dan seeder
-
-```bash
+#### Migrate and Seed
+```
 php artisan migrate --seed
 ```
 
-## Buat storage link
-
-```bash
+#### Storage Link
+```
 php artisan storage:link
 ```
 
-## Jalankan Serve
-
-```bash
+#### Serve on Artisan
+```
 php artisan serve
 ```
-
-## Contributing
-
-Contributions, issues and feature requests di persilahkan.
-Jangan ragu untuk memeriksa halaman masalah jika Anda ingin berkontribusi. **Berhubung Project ini saya sudah selesaikan sendiri, namun banyak fitur yang kalian dapat tambahkan silahkan berkontribusi yaa!**
 
 ## License
 
