@@ -69,6 +69,33 @@
             </div>
        
     </div>
+     <div class="container" style="margin-top:50px">
+           <div class="col-lg-9 col-md-9 col-sm-2" >
+                <div class="card"  id="#card" style="padding:10px;">
+                 
+               
+                    <!-- MULAI TABLE -->
+                
+                     <div class="col-lg-12 col-sm-12 hero-feature" >
+                        <div class="table-responsive">
+
+                        <table class="table table-striped table-bordered table-sm" id="table_user" >
+                        <thead style=" background-image: linear-gradient(to bottom right, ##B0C4DE, #f7f7f7);" >
+                            <tr>
+                                <th>Nama</th>
+                                <th>Email</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        </table>
+
+                        </div>
+                     </div> 
+                    <!-- AKHIR TABLE -->
+                </div>    
+            </div>
+       
+    </div>
     <!-- AKHIR CONTAINER -->
     <!-- MULAI MODAL FORM TAMBAH/EDIT-->
     <div class="modal fade" id="tambah-edit-modal" aria-hidden="true">
@@ -82,7 +109,7 @@
                     <form id="form-tambah-edit" name="form-tambah-edit" class="form-horizontal">
                         <div class="row">
                             <div class="col-sm-12"> 
-                                <input type="hidden" name="id" id="id">
+                                <input  name="id" id="id">
                                 <div class="form-group">
                                     <label for="name" class="col-sm-12 control-label">Jenis Surat</label>
                                     <div class="col-sm-12">
@@ -142,6 +169,52 @@
     </div>
     <!-- AKHIR MODAL -->
  
+     <!-- MULAI MODAL FORM TAMBAH/EDIT-->
+    <div class="modal fade" id="edit-user-modal" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-judul"></h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-edit-user" name="form-edit-user" class="form-horizontal">
+                        <div class="row">
+                            <div class="col-sm-12"> 
+                                <input type="hidden"name="id_user" id="id_user">
+                                <div class="form-group">
+                                    <label for="name" class="col-sm-12 control-label">Nama User Account</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="nama_user" name="nama_user"
+                                            value="" required>
+                                    </div>
+                                </div>
+ 
+                                <div class="form-group">
+                                    <label for="name" class="col-sm-12 control-label">E-mail</label>
+                                    <div class="col-sm-12">
+                                        <input type="email" class="form-control" id="email_user" name="email_user" value=""
+                                            required>
+                                    </div>
+                                </div>
+ 
+                            </div>
+ 
+                            <div class="col-sm-offset-2 col-sm-12">
+                                <button type="submit" class="btn btn-primary btn-block" id="tombol-simpan-user"
+                                    value="create">Simpan
+                                </button>
+                            </div>
+                        </div>
+ 
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- AKHIR MODAL -->
     <!-- MULAI MODAL KONFIRMASI DELETE-->
  
     <div class="modal fade" tabindex="-1" role="dialog" id="konfirmasi-modal" data-backdrop="false">
@@ -177,6 +250,8 @@
                 }
             });
         });
+
+        var url;
         //TOMBOL TAMBAH DATA
         //jika tombol-tambah diklik maka
         $('#tombol-tambah').click(function () {
@@ -231,6 +306,38 @@
                 ]
             });
         });
+        $(document).ready(function () {
+            $('#table_user').DataTable({
+                processing: true,
+                serverSide: true, //aktifkan server-side 
+                ajax: {
+                    
+                  
+                     url: "/admin/table_users",
+                    type: 'GET',
+                },
+                columns: [
+                    {
+                        data: 'name',
+                        name: 'name'
+                    },
+                    
+                    {
+                        data: 'email',
+                        name: 'email'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action'
+                    },
+                ],
+                order: [
+                    [0, 'asc']
+                ]
+            });
+        });
+
+        
         //SIMPAN & UPDATE DATA DAN VALIDASI (SISI CLIENT)
         //jika id = form-tambah-edit panjangnya lebih dari 0 atau bisa dibilang terdapat data dalam form tersebut maka
         //jalankan jquery validator terhadap setiap inputan dll dan eksekusi script ajax untuk simpan data
@@ -260,6 +367,44 @@
                         },
                         error: function (data) { //jika error tampilkan error pada console
                             console.log('Error:', data);
+                             console.log($('#form-tambah-edit')
+                            .serialize());
+                            $('#tombol-simpan').html('Simpan');
+                        }
+                    });
+                }
+            })
+        }
+
+         if ($("#form-edit-user").length > 0) {
+            $("#form-edit-user").validate({
+                submitHandler: function (form) {
+                    var actionType = $('#tombol-simpan-user').val();
+                    dataId = $(this).attr('id')
+                    $('#tombol-simpan-user').html('Sending..');
+                    $.ajax({
+                        data: $('#form-edit-user')
+                            .serialize(), //function yang dipakai agar value pada form-control seperti input, textarea, select dll dapat digunakan pada URL query string ketika melakukan ajax request
+                        url: "/admin/update_users", //url simpan data
+                        type: "POST", //karena simpan kita pakai method POST
+                        dataType: 'json', //data tipe kita kirim berupa JSON
+                        success: function (data) { //jika berhasil 
+                            $('#form-edit-user').trigger("reset"); //form reset
+                            $('#edit-user-modal').modal('hide'); //modal hide
+                            $('#tombol-simpan-user').html('Simpan'); //tombol simpan
+                            var oTable = $('#table_user').dataTable(); //inialisasi datatable
+                            oTable.fnDraw(false); //reset datatable
+                            iziToast.success({ //tampilkan iziToast dengan notif data berhasil disimpan pada posisi kanan bawah
+                                title: 'Data Berhasil Disimpan',
+                                message: '{{ Session('
+                                success ')}}',
+                                position: 'bottomRight'
+                            });
+                        },
+                        error: function (data) { //jika error tampilkan error pada console
+                            console.log('Error:', data);
+                            console.log($('#form-edit-user')
+                            .serialize());
                             $('#tombol-simpan').html('Simpan');
                         }
                     });
@@ -281,6 +426,20 @@
                 $('#nohp').val(data.nohp);
                 $('#email').val(data.email);
                 $('#alamat').val(data.alamat);
+            })
+        });
+        $('body').on('click', '.edit-account', function () {
+            dataId = $(this).attr('id');
+           
+            var data_id = $(this).data('id');
+            $.get('admin/' + data_id + '/edit_users', function (data) {
+                $('#modal-judul').html("Edit Post");
+                $('#tombol-simpan-user').val("edit-post");
+                $('#edit-user-modal').modal('show');
+                //set value masing-masing id berdasarkan data yg diperoleh dari ajax get request diatas               
+                $('#id_user').val(data.id);
+                 $('#nama_user').val(data.name);
+                $('#email_user').val(data.email);
             })
         });
         //jika klik class show (yang ada pada tombol delete) maka tampilkan modal konfirmasi hapus maka
@@ -313,12 +472,18 @@
         //jika klik class delete (yang ada pada tombol delete) maka tampilkan modal konfirmasi hapus maka
         $(document).on('click', '.delete', function () {
             dataId = $(this).attr('id');
+            url="admin/"+dataId;
+            $('#konfirmasi-modal').modal('show');
+        });
+         $(document).on('click', '.delete-user', function () {
+            dataId = $(this).attr('id');
+            url="/admin/delete_users/"+dataId;
             $('#konfirmasi-modal').modal('show');
         });
         //jika tombol hapus pada modal konfirmasi di klik maka
         $('#tombol-hapus').click(function () {
             $.ajax({
-                url: "admin/" + dataId, //eksekusi ajax ke url ini
+                url: url, //eksekusi ajax ke url ini
                 type: 'delete',
                 beforeSend: function () {
                     $('#tombol-hapus').text('Hapus Data'); //set text untuk tombol hapus
@@ -326,8 +491,11 @@
                 success: function (data) { //jika sukses
                     setTimeout(function () {
                         $('#konfirmasi-modal').modal('hide'); //sembunyikan konfirmasi modal
+                       
                         var oTable = $('#table_pegawai').dataTable();
+                        var oTableUser = $('# table_user').dataTable();
                         oTable.fnDraw(false); //reset datatable
+                        oTableUser.fnDraw(false);
                     });
                     iziToast.warning({ //tampilkan izitoast warning
                         title: 'Data Berhasil Dihapus',

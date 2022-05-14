@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SuratController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -54,6 +55,14 @@ Route::group(['middleware' => ['verified', 'role:admin']], function () {
     Route::resource('admin',PegawaiController::class)->except(['show','update']);
     Route::get('/admin', [PegawaiController::class, 'index']);
     Route::get('/admin/table', [PegawaiController::class, 'data_table']);
+    Route::get('/admin/table_users', [PegawaiController::class, 'data_table_user']);
+    Route::get('/admin/{id}/edit_users', [PegawaiController::class, 'get_edit_user']);
+    Route::post('/admin/update_users', [PegawaiController::class, 'update_user']);
+    Route::delete('/admin/delete_users/{id}', [PegawaiController::class, 'delete_user']);
+});
+Route::group(['middleware' => 'auth'], function () {
+    Route::resource('pembaca',SettingController::class)->except(['show','update']);
+    Route::post('/pembaca/update_users', [SettingController::class, 'update_user']);
 });
 
 Route::get('/', [ArtikelController::class, 'index']);

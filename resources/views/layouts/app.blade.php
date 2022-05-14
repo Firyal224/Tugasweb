@@ -21,6 +21,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
      <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href="{{ asset('css/pegawai.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/landingpage.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div id="app">
