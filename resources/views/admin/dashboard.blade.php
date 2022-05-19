@@ -493,7 +493,7 @@
                         $('#konfirmasi-modal').modal('hide'); //sembunyikan konfirmasi modal
                        
                         var oTable = $('#table_pegawai').dataTable();
-                        var oTableUser = $('# table_user').dataTable();
+                        var oTableUser = $('#table_user').dataTable();
                         oTable.fnDraw(false); //reset datatable
                         oTableUser.fnDraw(false);
                     });

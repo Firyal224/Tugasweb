@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="/"><img src="#" width="50px" height="50px" alt=""></a>
+        <a class="navbar-brand" href="/"><img src="https://img.freepik.com/free-vector/logo-template-background_1390-55.jpg?t=st=1652952319~exp=1652952919~hmac=e15d5a2c3dbdf66b6d602cdbb549d6ee06995f0023325a3327898198d01db6c9&w=1380
+" width="50px" height="50px" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

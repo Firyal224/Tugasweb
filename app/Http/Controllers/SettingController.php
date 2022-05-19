@@ -59,7 +59,7 @@ class SettingController extends Controller
             else{
                 //   session()->flash('message','new password can not be the old password!');
                 //   return redirect()->back();
-                // dd("new password can not be the old password!");
+                dd("new password can not be the old password!");
                 }
  
            }
@@ -67,7 +67,7 @@ class SettingController extends Controller
           else{
             //    session()->flash('message','old password doesnt matched ');
             //    return redirect()->back();
-            //    dd("old password doesnt matched ");
+               dd("old password doesnt matched ");
              }
              
         return response()->json($post);
